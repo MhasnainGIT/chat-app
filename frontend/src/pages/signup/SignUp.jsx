@@ -157,7 +157,7 @@ const SignUp = () => {
 
 					{/* Question Content */}
 					<div className="p-8">
-						{step === questions.length - 1 ? (
+						{step >= questions.length - 1 ? (
 							/* Final Step - Show all info and submit */
 							<form onSubmit={handleSubmit} className="space-y-4">
 								<div className="text-center mb-6">
@@ -310,7 +310,7 @@ const SignUp = () => {
 										onClick={handleNext}
 										className="flex-1 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-medium rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-smooth"
 									>
-										{step === questions.length - 2 ? "Review →" : "Next →"}
+										{step === questions.length - 1 ? "Review →" : "Next →"}
 									</button>
 								</div>
 							</>
