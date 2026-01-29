@@ -132,13 +132,13 @@ const SignUp = () => {
 				{/* Progress Bar */}
 				<div className="mb-6">
 					<div className="flex justify-between text-xs text-gray-400 mb-2">
-						<span>Step {step + 1} of {questions.length}</span>
-						<span>{Math.round(((step + 1) / questions.length) * 100)}%</span>
+						<span>Step {step + 1} of {questions.length + 1}</span>
+						<span>{Math.round(((step + 1) / (questions.length + 1)) * 100)}%</span>
 					</div>
 					<div className="h-2 bg-gray-200 rounded-full overflow-hidden">
 						<div 
 							className="h-full bg-gradient-to-r from-blue-400 to-indigo-500 transition-all duration-500"
-							style={{ width: `${((step + 1) / questions.length) * 100}%` }}
+							style={{ width: `${((step + 1) / (questions.length + 1)) * 100}%` }}
 						></div>
 					</div>
 				</div>
@@ -157,7 +157,7 @@ const SignUp = () => {
 
 					{/* Question Content */}
 					<div className="p-8">
-						{step >= questions.length - 1 ? (
+						{step >= questions.length ? (
 							/* Final Step - Show all info and submit */
 							<form onSubmit={handleSubmit} className="space-y-4">
 								<div className="text-center mb-6">
@@ -184,8 +184,8 @@ const SignUp = () => {
 									</div>
 									<div className="flex justify-between items-center">
 										<span className="text-gray-500">Password</span>
-										<span className={`font-medium ${inputs.password === inputs.confirmPassword ? "text-green-500" : "text-red-500"}`}>
-											{inputs.password === inputs.confirmPassword ? "✓ Matching" : "✗ Not matching"}
+										<span className={`font-medium ${!inputs.confirmPassword ? "text-yellow-500" : inputs.password === inputs.confirmPassword ? "text-green-500" : "text-red-500"}`}>
+											{!inputs.confirmPassword ? "⚠ Not entered" : inputs.password === inputs.confirmPassword ? "✓ Matching" : "✗ Not matching"}
 										</span>
 									</div>
 								</div>
