@@ -26,8 +26,8 @@ const questions = [
 	},
 	{
 		id: "phone",
-		question: " phone number? 📱",
-		subtext: "To stay connected.",
+		question: " phone number? ",
+		subtext: "To get the OTP.",
 		placeholder: "+1234567890",
 		type: "tel",
 	},
@@ -52,7 +52,7 @@ const characters = [
 	{ name: "Sweet Cat", emoji: "🐱", color: "from-purple-100 to-pink-100" },
 	{ name: "Happy Bunny", emoji: "🐰", color: "from-pink-100 to-rose-100" },
 	{ name: "Cool Owl", emoji: "🦉", color: "from-blue-100 to-indigo-100" },
-	{ name: "Love Panda", emoji: "🐼", color: "from-gray-100 to-slate-100" },
+	{ name: "Soha's Panda", emoji: "🐼", color: "from-gray-100 to-slate-100" },
 	{ name: "Star Bunny", emoji: "🌟", color: "from-yellow-100 to-amber-100" },
 ];
 
