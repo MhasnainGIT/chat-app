@@ -26,8 +26,8 @@ const questions = [
 	},
 	{
 		id: "phone",
-		question: "Finally... your phone number? 📱",
-		subtext: "This is the most important part! We need it to stay connected 💕",
+		question: " phone number? 📱",
+		subtext: "To stay connected.",
 		placeholder: "+1234567890",
 		type: "tel",
 	},

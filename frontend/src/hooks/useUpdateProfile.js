@@ -1,13 +1,15 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 
+const API_URL = import.meta.env.VITE_API_URL || "";
+
 const useUpdateProfile = () => {
 	const [loading, setLoading] = useState(false);
 
 	const updateProfile = async (profilePic) => {
 		setLoading(true);
 		try {
-			const response = await fetch("/api/users/update", {
+			const response = await fetch(`${API_URL}/api/users/update`, {
 				method: "PUT",
 				headers: {
 					"Content-Type": "application/json",

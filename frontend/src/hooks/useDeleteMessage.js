@@ -1,12 +1,14 @@
 import { useState } from "react";
 
+const API_URL = import.meta.env.VITE_API_URL || "";
+
 const useDeleteMessage = () => {
 	const [loading, setLoading] = useState(false);
 
 	const deleteMessage = async (messageId, onSuccess) => {
 		setLoading(true);
 		try {
-			const response = await fetch(`/api/messages/delete/${messageId}`, {
+			const response = await fetch(`${API_URL}/api/messages/delete/${messageId}`, {
 				method: "DELETE",
 				headers: {
 					"Content-Type": "application/json",
